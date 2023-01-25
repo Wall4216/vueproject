@@ -1,5 +1,7 @@
 <script setup>
     import {ref} from "vue";
+    import {useRouter} from "vue-router";
+
     let form = ref({
         name: '',
         description: '',
@@ -8,11 +10,13 @@
         quantity: '',
         price: ''
     })
+
+    const router = useRouter()
     const getPhoto = () => {
         let photo = "/upload/image.png"
         if (form.value.photo)
         {
-           if(form.value.indexOf('base64') != -1)
+           if(form.value.photo.indexOf('base64') != -1)
            {
                photo = form.value.photo
            }
@@ -48,7 +52,20 @@
 
         axios.post("/api/add_product", formData)
         .then((response)=>{
+            form.value.name='',
+            form.value.description='',
+            form.value.photo='',
+            form.value.type='',
+            form.value.quantity='',
+            form.value.price=''
 
+            router.push('/')
+
+            toast.fire({
+                icon: "success",
+                title: "Product add successfully",
+
+            })
         })
             .catch((error) => {
 

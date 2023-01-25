@@ -70,7 +70,7 @@ const outImage = (img) => {
             </div>
 
             <!-- product 1 -->
-            <div class="table--items products__list__item" v-for="item in items" :key="item.id" v-if="products.length > 0">
+            <div class="table--items products__list__item" v-for="item in items" :key="item.id">
                 <div class="products__list__item--imgWrapper">
                     <img class="products__list__item--img" :src="ourImage(item.photo)"  style="height: 40px;" v-if="item.photo">
                 </div>
@@ -92,7 +92,7 @@ const outImage = (img) => {
                     </button>
                 </div>
             </div>
-        <div class="table--items products__list__item" v-else>
+        <div class="table--items products__list__item">
             <p> Products not founded</p>
         </div>
         </div>

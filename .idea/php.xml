@@ -111,6 +111,7 @@
       <path value="$PROJECT_DIR$/laravel-vue-demo/vendor/sebastian/version" />
       <path value="$PROJECT_DIR$/laravel-vue-demo/vendor/webmozart/assert" />
       <path value="$PROJECT_DIR$/laravel-vue-demo/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/laravel-vue-demo/vendor/intervention/image" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />
